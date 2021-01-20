@@ -1,0 +1,89 @@
+$bg-color: rgba(240, 242, 245, 1);
+.sider {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  // height: 100%;
+  background: $bg-color;
+  :global {
+    .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal)
+      .ant-menu-item-selected {
+      background-color: #fff;
+    }
+
+    .ant-menu-item,
+    .ant-menu-submenu > .ant-menu-submenu-title,
+    .ant-menu-sub.ant-menu-inline > .ant-menu-item {
+      margin: 0 !important;
+      height: 40px !important;
+      line-height: 40px !important;
+      font-size: 12px !important;
+      font-weight: 400 !important;
+      color: rgba(0, 0, 0, 0.65) !important;
+      opacity: 1 !important;
+    }
+    .ant-menu-inline .ant-menu-item:first-child {
+      margin-top: 0 !important;
+      padding-top: 4px;
+    }
+    .ant-menu-dark .ant-menu-inline.ant-menu-sub,
+    .ant-menu.ant-menu-dark .ant-menu-item-selected {
+      color: rgba(0, 0, 0, 0.65) !important;
+      background: rgba(240, 242, 245, 1);
+    }
+
+    .ant-menu.ant-menu-dark {
+      .ant-menu-submenu-title {
+        .ant-menu-submenu-arrow::after,
+        .ant-menu-submenu-arrow::before {
+          background: rgba(0, 0, 0, 0.45) !important;
+        }
+      }
+    }
+
+    //   // 未选中字体颜色
+    .ant-menu-dark .ant-menu-item > a {
+      color: rgba(0, 0, 0, 0.65);
+    }
+    .ant-menu-dark .ant-menu-item-active > a:hover {
+      color: #ff6f00;
+    }
+    .ant-menu-dark .ant-menu-item-selected > a {
+      color: #ff6f00;
+    }
+  }
+}
+
+.logo {
+  box-sizing: border-box;
+  padding: 16px 0 16px 20px;
+
+  &__title {
+    font-size: 14px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.85);
+    opacity: 1;
+  }
+}
+
+.menu {
+  background: $bg-color !important;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0px;
+    border-top: 1px solid rgba(112, 112, 112, 0.14901960784313725);
+  }
+
+  &__sub {
+    background: $bg-color;
+  }
+  &__item {
+    margin: 0;
+    height: 60px;
+    background: $bg-color;
+  }
+}
